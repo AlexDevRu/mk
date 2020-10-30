@@ -1,0 +1,138 @@
+@import "_vars.scss";
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: $font_title;
+	font-size: 14px;
+	background-color: $main_dark;
+	color: $primary;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+}
+
+input:focus, input:active,
+button:focus, button:active,
+textarea:focus, textarea:active {
+	outline: none;
+}
+
+button {
+	border: none;
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	font-family: $font_main;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: $secondary;
+	&:hover {
+		color: $primary;
+	}
+}
+
+input, textarea {
+	padding: 18px 27px;
+	color: $secondary;
+	border: none;
+}
+
+.base-btn {
+	display: inline-block;
+	color: $main_light;
+	background-color: $accent;
+	border-radius: 2px;
+	font-weight: 700;
+	font-size: 13px;
+	transition: all 0.3s ease-out;
+	text-align: center;
+	letter-spacing: 0.08em;
+	transform: all 0.3s ease-out;
+
+	&:hover {
+		color: $main_light;
+		background-color: $accent_dark;
+		text-decoration: none;
+	}
+}
+
+.slick-slide:focus {
+	outline: none;
+}
+
+.slick-arrow {
+	z-index: 99;
+	cursor: pointer;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	button {
+		font-size: 0;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $disabled;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+	.slick-active button {
+		background-color: $accent;
+	}
+}
+
+.title {
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: 400;
+	color: $title;
+}
+
+.card {
+	background-color: $main_light;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.circle {
+	border-radius: 50%;
+	border: 3px solid $details;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-text {
+	font-family: $font_main;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.corner {
+	position: relative;
+}
+.corner::before {
+	position: absolute;
+	content: '';
+	display: block;
+	top: 0;
+	right: 0;
+	border: 35px solid transparent; 
+	border-top: 35px solid $accent; 
+	border-right: 35px solid $accent;
+}

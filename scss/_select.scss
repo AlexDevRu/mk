@@ -1,0 +1,39 @@
+.select {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+  select {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+    outline: 0;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }   
+  &::-ms-expand {
+    display: none;
+  }
+  
+  &:hover,
+  &:focus {
+    //color: $color--black;
+  }
+}
+ 
+.select__arrow {
+  position: absolute;
+  top: 8px;
+  right: -7px;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  border: solid $primary;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+
+  .select select:hover ~ &
+  .select select:focus ~ & {
+    //border-top-color: $color--black;
+  }
+}
