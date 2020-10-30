@@ -28,7 +28,7 @@ $('.header__burger').click(function(e) {
 
 var isAnimate = false;
 $(window).scroll(function(event) {
-	if($(window).scrollTop() > 200) {
+	if($(window).scrollTop() > 100) {
 		if(!isAnimate && $('.header__top').height() > 0) {
 			isAnimate = true;
 			$('.header__top').css({'min-height': '0'});
